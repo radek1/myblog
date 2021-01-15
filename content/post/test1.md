@@ -96,6 +96,46 @@ run again hugo server, with drafts enabled:
 
 `hugo server -D`
 
+# Committing changes to Github and setting up Netlify
+
+I basically followed the guide here: https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/
+
+first create a repository `myblog` on Github
+```
+ git add .
+ git commit -m "Initial commit"
+ git remote add origin https://github.com/radek1/myblog.git
+ git push -u origin master
+```
+
+After signing in to Netlify, click on the New site from Git:
+choose the Git provider
+The next step is to install Netlify on GitHub account.
+
+Netlify publish a new site, in my case `gifted-clarke-326479`.
+
+# DNS and domain magic
+
+I followed roughly https://medium.com/@jacobsowles/how-to-deploy-a-google-domains-site-to-netlify-c62793d8c95e
+go to domains.google.com
+set DNS, custom name servers
+dns1.p02.nsone.net
+dns2.p02.nsone.net
+dns3.p02.nsone.net
+dns4.p02.nsone.net
+
+add Custom resource record (A record)
+gifted-clarke-326479.netlify.app
+A
+1h
+104.198.14.52
+
+go back to NEtlfy and verify DNS. Wait for records to propagate, it was ~30mins in my case.
+
+
+
+
+
 
 
 
