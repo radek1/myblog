@@ -1,0 +1,33 @@
+.main-content-wrap{
+    max-width: 100px
+}     
+.measure-wide {   max-width: 60em; }
+.measure {        max-width: 50em; }
+.measure-narrow { max-width: 20em; }
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .measure-m {
+    max-width: 50em;
+  }
+  .measure-wide-m {
+    max-width: 60em;
+  }
+  .measure-narrow-m {
+    max-width: 20em;
+  }
+  .indent-m {
+    text-indent: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .small-caps-m {
+    -webkit-font-feature-settings: "c2sc";
+            font-feature-settings: "c2sc";
+    font-variant: small-caps;
+  }
+  .truncate-m {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
